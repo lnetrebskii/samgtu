@@ -95,11 +95,11 @@ function GenerateReadmeInDir {
     $githubPath = "$gitRemoteUrl/blob/main/$relativePath".Replace('\', '/')
 
     # Create a QR code for the project path
-    $qrCodePath = ".\QRCode.png"
+    $qrCodePath = "QRCode.png"
     GenerateQRCode -data $githubPath -outputFile $qrCodePath
 
     echo "## Package" >> README.md
-    echo "Path: " + $githubPath >> README.md
+    echo "Path: " $githubPath >> README.md
     echo "### QR Code to package" >> README.md
     echo "![QR Code]($qrCodePath)" >> README.md
 
