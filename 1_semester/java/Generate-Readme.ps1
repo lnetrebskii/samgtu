@@ -72,7 +72,7 @@ function GenerateReadmeInDir {
         Get-ChildItem -Path $path -Recurse -Filter *.java | ForEach-Object {
             $relativePath = $_.FullName.Replace($gitRoot, '').TrimStart('\')
             $githubPath = "$gitRemoteUrl/blob/main/$relativePath".Replace('\', '/')
-            echo "### $githubPath" >> README.md
+            echo "**$githubPath**" >> README.md
             echo '```java' >> README.md
             Get-Content $_.FullName -Encoding UTF8 | Out-File -Append README.md
             echo '```' >> README.md
