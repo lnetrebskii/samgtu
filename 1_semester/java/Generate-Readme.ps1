@@ -100,7 +100,7 @@ function GenerateReadmeInDir {
 
     echo "## Package" >> README.md
     echo "Path: " $githubPath >> README.md
-    echo "### QR Code to package" >> README.md
+    echo "### QR Code to the package" >> README.md
     echo "![QR Code]($qrCodePath)" >> README.md
 
     Set-Location $script:initialDir
