@@ -1,3 +1,13 @@
+function GenerateQRCode {
+    param (
+        [string]$data,
+        [string]$outputFile
+    )
+
+    $url = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=$data"
+    Invoke-WebRequest $url -OutFile $outputFile
+}
+
 function BuildJavaProject {
     param (
         [string]$dirPath
@@ -17,6 +27,7 @@ function BuildJavaProject {
 
     # Move the generated .jar (binary) to the project root
     $targetPath = "$dirPath\target"
+    $destPath = ""
     $jarFile = Get-ChildItem -Path $targetPath -Filter "*.jar" | Select-Object -First 1
     if ($jarFile) {
         $destPath = "$dirPath\$($jarFile.Name)"
@@ -26,7 +37,7 @@ function BuildJavaProject {
         Write-Host "No .jar file found for project in $dirPath"
     }
 
-    Set-Location $script:initialDir
+    return $destPath
 }
 
 function GenerateReadmeInDir {
@@ -79,7 +90,18 @@ function GenerateReadmeInDir {
     Write-Host "README.md generated successfully in $dirPath!"
 
     # Build the Java project
-    BuildJavaProject -dirPath $dirPath
+    $destPath = BuildJavaProject -dirPath $dirPath
+    $relativePath = $destPath.Replace($gitRoot, '').TrimStart('\')
+    $githubPath = "$gitRemoteUrl/blob/main/$relativePath".Replace('\', '/')
+
+    # Create a QR code for the project path
+    $qrCodePath = ".\QRCode.png"
+    GenerateQRCode -data $githubPath -outputFile $qrCodePath
+
+    echo "## Package" >> README.md
+    echo "Path: " + $githubPath >> README.md
+    echo "### QR Code to package" >> README.md
+    echo "![QR Code]($qrCodePath)" >> README.md
 
     Set-Location $script:initialDir
 }
