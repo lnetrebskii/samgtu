@@ -1,3 +1,34 @@
+function BuildJavaProject {
+    param (
+        [string]$dirPath
+    )
+
+    Set-Location $dirPath
+
+    # Build the Java project using Maven
+    Write-Host "Building Java project in $dirPath..."
+    $mvnResult = & mvn clean package
+
+    # Check if build was successful
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "Failed to build project in $dirPath"
+        return
+    }
+
+    # Move the generated .jar (binary) to the project root
+    $targetPath = "$dirPath\target"
+    $jarFile = Get-ChildItem -Path $targetPath -Filter "*.jar" | Select-Object -First 1
+    if ($jarFile) {
+        $destPath = "$dirPath\$($jarFile.Name)"
+        Move-Item -Path $jarFile.FullName -Destination $destPath -Force
+        Write-Host "Moved binary to $destPath"
+    } else {
+        Write-Host "No .jar file found for project in $dirPath"
+    }
+
+    Set-Location $script:initialDir
+}
+
 function GenerateReadmeInDir {
     param (
         [string]$dirPath
@@ -46,6 +77,9 @@ function GenerateReadmeInDir {
     AddJavaContentToReadme ".\src\test\java" "test files from src/test/java"
 
     Write-Host "README.md generated successfully in $dirPath!"
+
+    # Build the Java project
+    BuildJavaProject -dirPath $dirPath
 
     Set-Location $script:initialDir
 }
