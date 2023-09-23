@@ -20,6 +20,10 @@ public class Main {
 
   }
 
+  /**
+   * Требует ввод числа и при неверно введенном формате требует повторить ввод.
+   * @return Введенное число типа float
+   */
   private static float promptForFloat(Scanner scanner, String prompt) {
     while (true) {
       System.out.print(prompt);
@@ -27,8 +31,10 @@ public class Main {
         return scanner.nextFloat();
       } catch (InputMismatchException e) {
         System.out.println("Введено некорректное значение. Пожалуйста, введите число.");
-        scanner.next(); // Clear the invalid input
+        scanner.next(); // Очищаем неверный ввод.
       }
     }
+
+  // После компиляции этого файла будет создан .class файл с именем Main.class.
   }
 }
