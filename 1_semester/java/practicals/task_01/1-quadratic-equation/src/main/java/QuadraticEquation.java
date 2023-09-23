@@ -46,6 +46,11 @@ public class QuadraticEquation {
    * @return Корни ураванения.
    */
   public double[] solve() {
+
+    if (a == 0) {
+      return new double[] { -c / b };
+    }
+
     Discriminant d = new Discriminant();
 
     // Использование вложенного класса обосновано тем, что дискриминант является 
