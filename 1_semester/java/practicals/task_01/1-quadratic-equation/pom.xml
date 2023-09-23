@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>samgtu.semester1.task1</groupId>
-    <artifactId>dice-game</artifactId>
+    <artifactId>quadratic-equation</artifactId>
     <version>1.0</version>
 
     <properties>
@@ -13,7 +13,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-
 
     <dependencies>
 
@@ -34,7 +33,6 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <!-- Указание главного класса -->
                             <mainClass>Main</mainClass>
                         </manifest>
                     </archive>
@@ -46,4 +44,5 @@
     <description>
         Реализуйте игру в кости. Играют N игроков (компьютер в списке последний). Подкидываются одновременно К кубиков. Выигрывает тот, у кого большая сумма очков. Кто выиграл, тот и кидает первым в следующем кону. Игра идет до 7 выигрышей. Начинаете игру вы.
     </description>
+
 </project>
