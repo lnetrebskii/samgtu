@@ -2,38 +2,77 @@ package com.example.model;
 
 /**
  * Класс для представления адреса человека.
+ * Содержит улицу и номер дома.
  */
 public class Address {
-    private String street;
-    private String houseNumber;
+  // Улица, на которой расположен адрес
+  private String street;
 
-    public Address() {
-        super();
-    }
+  // Номер дома по указанной улице
+  private String houseNumber;
 
-    public Address(String street, String houseNumber) {
-        this.street = street;
-        this.houseNumber = houseNumber;
-    }
+  /**
+   * Конструктор по умолчанию.
+   * Инициализирует пустой объект Address.
+   */
+  public Address() {
+    super();
+  }
 
-    public String getStreet() {
-        return street;
-    }
+  /**
+   * Конструктор с параметрами для инициализации адреса.
+   * 
+   * @param street      Улица адреса
+   * @param houseNumber Номер дома адреса
+   */
+  public Address(String street, String houseNumber) {
+    this.street = street;
+    this.houseNumber = houseNumber;
+  }
 
-    public void setStreet(String street) {
-        this.street = street;
-    }
+  /**
+   * Получение улицы адреса.
+   * 
+   * @return Название улицы.
+   */
+  public String getStreet() {
+    return street;
+  }
 
-    public String getHouseNumber() {
-        return houseNumber;
-    }
-    
-    public void setHouseNumber(String houseNumber) {
-        this.houseNumber = houseNumber;
-    }
+  /**
+   * Установка улицы адреса.
+   * 
+   * @param street Название улицы для установки.
+   */
+  public void setStreet(String street) {
+    this.street = street;
+  }
 
-    @Override
-    public String toString() {
-        return "Address { street = '" + this.street + "', houseNumber=" + this.houseNumber + "}";
-    }
+  /**
+   * Получение номера дома адреса.
+   * 
+   * @return Номер дома.
+   */
+  public String getHouseNumber() {
+    return houseNumber;
+  }
+
+  /**
+   * Установка номера дома адреса.
+   * 
+   * @param houseNumber Номер дома для установки.
+   */
+  public void setHouseNumber(String houseNumber) {
+    this.houseNumber = houseNumber;
+  }
+
+  /**
+   * Представление адреса в виде строки.
+   * 
+   * @return Строковое представление адреса.
+   */
+  @Override
+  public String toString() {
+    return "Address { street = '" + this.street + "', houseNumber=" + this.houseNumber + "}";
+  }
 }
