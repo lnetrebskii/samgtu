@@ -1,0 +1,162 @@
+[
+  {
+      "lastName": "Иванов",
+      "birthDate": "1990-01-05",
+      "address": {
+          "street": "ул. Ленина",
+          "houseNumber": "1а"
+      }
+  },
+  {
+      "lastName": "Петров",
+      "birthDate": "1985-03-15",
+      "address": {
+          "street": "ул. Ленина",
+          "houseNumber": "2б"
+      }
+  },
+  {
+      "lastName": "Смирнов",
+      "birthDate": "1980-07-21",
+      "address": {
+          "street": "ул. Строителей",
+          "houseNumber": "3"
+      }
+  },
+  {
+      "lastName": "Кузнецов",
+      "birthDate": "1975-12-30",
+      "address": {
+          "street": "ул. Ленина",
+          "houseNumber": "4а"
+      }
+  },
+  {
+      "lastName": "Попов",
+      "birthDate": "1982-11-11",
+      "address": {
+          "street": "пр. Мира",
+          "houseNumber": "5"
+      }
+  },
+  {
+      "lastName": "Васильев",
+      "birthDate": "1988-06-06",
+      "address": {
+          "street": "ул. Космонавтов",
+          "houseNumber": "6"
+      }
+  },
+  {
+      "lastName": "Павлов",
+      "birthDate": "1993-03-03",
+      "address": {
+          "street": "ул. Центральная",
+          "houseNumber": "7а"
+      }
+  },
+  {
+      "lastName": "Козлов",
+      "birthDate": "1989-05-05",
+      "address": {
+          "street": "пр. Ветеранов",
+          "houseNumber": "8б"
+      }
+  },
+  {
+      "lastName": "Романов",
+      "birthDate": "1978-08-08",
+      "address": {
+          "street": "ул. Лесная",
+          "houseNumber": "9"
+      }
+  },
+  {
+      "lastName": "Осипов",
+      "birthDate": "1984-09-09",
+      "address": {
+          "street": "ул. Луговая",
+          "houseNumber": "10"
+      }
+  },
+  {
+      "lastName": "Алексеев",
+      "birthDate": "1991-10-10",
+      "address": {
+          "street": "ул. Школьная",
+          "houseNumber": "11а"
+      }
+  },
+  {
+      "lastName": "Титов",
+      "birthDate": "1996-04-04",
+      "address": {
+          "street": "пр. Первомайский",
+          "houseNumber": "12б"
+      }
+  },
+  {
+      "lastName": "Макаров",
+      "birthDate": "1976-12-01",
+      "address": {
+          "street": "ул. Горького",
+          "houseNumber": "13"
+      }
+  },
+  {
+      "lastName": "Антонов",
+      "birthDate": "1981-11-15",
+      "address": {
+          "street": "ул. Садовая",
+          "houseNumber": "14"
+      }
+  },
+  {
+      "lastName": "Тарасов",
+      "birthDate": "1979-10-19",
+      "address": {
+          "street": "ул. Лесная",
+          "houseNumber": "15"
+      }
+  },
+  {
+      "lastName": "Беляев",
+      "birthDate": "1992-09-20",
+      "address": {
+          "street": "пр. Ленинградский",
+          "houseNumber": "16"
+      }
+  },
+  {
+      "lastName": "Морозов",
+      "birthDate": "1977-08-25",
+      "address": {
+          "street": "ул. Киевская",
+          "houseNumber": "17"
+      }
+  },
+  {
+      "lastName": "Петухов",
+      "birthDate": "1986-07-28",
+      "address": {
+          "street": "ул. Большая",
+          "houseNumber": "18"
+      }
+  },
+  {
+      "lastName": "Никонов",
+      "birthDate": "1995-06-29",
+      "address": {
+          "street": "пр. Широкий",
+          "houseNumber": "19"
+      }
+  },
+  {
+      "lastName": "Зайцев",
+      "birthDate": "1983-05-31",
+      "address": {
+          "street": "ул. Узкая",
+          "houseNumber": "20"
+      }
+  }
+]
